@@ -3,7 +3,7 @@
 
 
 
-std::string project1(std::string input){
+std::string problem1(std::string input){
     char inputArr[] = {'w','e','r','t','y','u','i','o','p','[',']','s','d','f','g','h','j'
     ,'k','l',';','x','c','v','b','n','m',',','.'};
     char outputArr[] = {'q','w','e','r','t','y','u','i','o','p','[','a','s','d','f','g','h','j'
@@ -33,5 +33,5 @@ std::string project1(std::string input){
 
 
 int main(){
-    std::cout << project1("O S, GOMR YPFSU")<< std::endl; 
+    std::cout << problem1("O S, GOMR YPFSU")<< std::endl; 
 }
