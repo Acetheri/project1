@@ -2,6 +2,7 @@
 #include <string>
 
 
+
 /**
  * Problem 1 takes in an input at edits the string to move each
  * letter one to the left it does this by iterating through
@@ -76,7 +77,89 @@ void problem3(int number){
 }
 
 
+struct bookT{
+    std::string Title;
+    std::string authors[5];
+    long congressID;
+    std::string subjects[5];
+    std::string publisher;
+    int year;
+    bool circulating;
+};
+
+
+bookT libraryT[1000];
+
+void problem4(std::string subject){
+    std::cout << "Search for subject " << subject << std::endl;
+    std::cout<< "----------------------------" << std::endl;
+    for(int i = 0; i < 1000; i++){
+        bookT temp = libraryT[i];
+        for(int j = 0; j < 5; j++){
+            if(temp.subjects[j] == subject){
+                std::cout << "Title: " << temp.Title << std::endl;
+                std::cout << "First Author: " << temp.authors[0] << std::endl;
+                std::cout << "Congress ID: " << temp.congressID;
+                std::cout << std::endl;
+            }
+        }
+    }
+
+}
+
+
 int main(){
-    std::cout << problem1("O S, GOMR YPFSU")<< std::endl; 
-    problem3(195);
+    /**
+     * Test for problem 1
+    */
+    //std::cout << problem1("O S, GOMR YPFSU")<< std::endl; 
+    /**
+     * Test for problem 3
+    */
+    //problem3(195);
+    /**
+     * Test for problem 4
+    */
+//    bookT book1;
+//    book1.Title = "Odyssey";
+//    book1.authors[0] = "Homer";
+//    book1.congressID = 101110011;
+//    book1.subjects[0] = "greek";
+//    book1.subjects[1] = "myth";
+
+//    bookT book2;
+//    book2.Title = "Ragnorok";
+//    book2.authors[0] = "Zoëga";
+//    book2.congressID = 101110012;
+//    book2.subjects[0] = "norse";
+//    book2.subjects[1] = "myth";
+
+//    bookT book3;
+//    book3.Title = "Fault in our stars";
+//    book3.authors[0] = "John Green";
+//    book3.congressID = 101110013;
+//    book3.subjects[0] = "Romance";
+//    book3.subjects[1] = "Tradgedy";
+
+//    bookT book4;
+//    book4.Title = "Kaikeyi";
+//    book4.authors[0] = "Vaishnavi Patel";
+//    book4.congressID = 101110014;
+//    book4.subjects[0] = "indian";
+//    book4.subjects[1] = "myth";
+
+//    bookT book5;
+//    book5.Title = "Lord Of the Mysteries";
+//    book5.authors[0] = "Cuttlefish";
+//    book5.congressID = 101110015;
+//    book5.subjects[0] = "Chinese";
+//    book5.subjects[1] = "Mystery";
+
+//     libraryT[0] = book1;
+//     libraryT[1] = book2;
+//     libraryT[2] = book3;
+//     libraryT[3] = book4;
+//     libraryT[4] = book5;
+    
+//     problem4("myth");
 }
